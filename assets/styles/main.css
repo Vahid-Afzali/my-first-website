@@ -1,6 +1,6 @@
 :root{
     --primary-color: #ebEBF4F6;
-    --background-color:#7ab2b2c7;
+    --background-color:#17d6d6c7;
     --top-header:#09637E;
     --text-color:#1e293b;
     --secondary-color:#64748b;
@@ -113,6 +113,7 @@ a{
 }
 .card{
     display: flex;
+    
     gap: 20px;
     
 }
@@ -121,19 +122,77 @@ img{
     width: 100%;
     object-fit: cover;
     border-radius: 8px;
+    transition: .3s;
+    overflow: hidden;
 }
+img:hover{
+    transform: scale(1.1);
+}
+
 .fotos{
     width: 320px;
     height: 220px;
+    overflow: hidden;
+    position: relative;
+
+}
+.baghe{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 20px;
+    top: 10px;
+    right: 20px;
+    z-index: 5;
+}
+.baghe span{
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+.baghe span:hover{
+    background-color: rgba(161, 5, 5, 0.733);
+}
+.wishlist{
+    border: none;
+    padding: 5px 10px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+    
+}
+.wishlist:hover{
+    background-color: rgba(145, 5, 5, 0.733);;
+}
+.colors{
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    z-index: 50px; 
+    height: 60px;
+    width: 60px;cursor: pointer;
 
     
+
+}
+.colors span{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
 }
 .article{
     background-color: #eee;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    
+    position: relative;
     border-radius: 8px;
     height: auto;
     width: 320px;
